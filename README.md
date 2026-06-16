@@ -14,4 +14,4 @@ This should setup everything and install all the required packages. You will be 
 
 Thank you.
 
-**Update:** With @daddys-dispatch help, the code has been posted as Python files as well. Most of them can't be executed on the terminal directly because they were written for Jupyter notebooks. The goal was to provide files for easy accessibility via the terminal using `cat`, which works flawlessly. As usual, love you babe! 😘
+**Update:** With [@daddys-dispatch](https://github.com/daddys-dispatch) help, the code have also been uploaded as Python files. Most of them can't be executed on the terminal directly because they were written specifically for Jupyter notebooks. The goal was to provide files for easy accessibility via the terminal using `cat`, which works flawlessly as expected. Love you babe! 😘
