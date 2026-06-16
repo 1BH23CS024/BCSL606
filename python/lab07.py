@@ -1,4 +1,3 @@
-# Cell 1
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -10,7 +9,6 @@ from sklearn.pipeline import make_pipeline
 from sklearn.metrics import mean_squared_error, r2_score
 
 
-# Cell 2
 def show_results(X, y_true, y_pred, title, x_label, y_label, line=False):
     plt.scatter(X, y_true, label="Actual")
 
@@ -26,7 +24,6 @@ def show_results(X, y_true, y_pred, title, x_label, y_label, line=False):
     print("R² :", r2_score(y_true, y_pred))
 
 
-# Cell 3
 X, y = fetch_california_housing(as_frame=True, return_X_y=True)
 Xtr, Xte, ytr, yte = train_test_split(
     X[["AveRooms"]], y, test_size=0.2, random_state=42
@@ -35,7 +32,6 @@ Xtr, Xte, ytr, yte = train_test_split(
 lr = LinearRegression().fit(Xtr, ytr)
 pred = lr.predict(Xte)
 
-# Cell 4
 show_results(
     Xte,
     yte,
@@ -46,7 +42,6 @@ show_results(
     True,
 )
 
-# Cell 5
 autompg = pd.read_csv(
     "https://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data",
     sep=r"\s+",
@@ -71,7 +66,6 @@ pr = make_pipeline(PolynomialFeatures(2), StandardScaler(), LinearRegression()).
 )
 pred = pr.predict(Xte)
 
-# Cell 6
 show_results(
     Xte, yte, pred, "Polynomial Regression", "Displacement", "Miles per gallon "
 )

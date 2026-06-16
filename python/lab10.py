@@ -1,4 +1,3 @@
-# Cell 1
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -10,7 +9,6 @@ from sklearn.decomposition import PCA
 from sklearn.metrics import confusion_matrix, classification_report
 
 
-# Cell 2
 def plot_clusters(df, title, hue="Cluster", palette="Set1", centers=None):
     plt.figure(figsize=(8, 6))
     sns.scatterplot(
@@ -34,7 +32,6 @@ def plot_clusters(df, title, hue="Cluster", palette="Set1", centers=None):
     plt.show()
 
 
-# Cell 3
 X, y = load_breast_cancer(return_X_y=True)
 
 X_scaled = StandardScaler().fit_transform(X)
@@ -52,11 +49,6 @@ X_center = pca.transform(kmeans.cluster_centers_)
 df = pd.DataFrame(X_pca, columns=["PC1", "PC2"])
 df["Cluster"], df["True Label"] = clusters, y
 
-# Cell 4
 plot_clusters(df, "K-Means Clustering")
-
-# Cell 5
 plot_clusters(df, "True Labels", "True Label", "coolwarm")
-
-# Cell 6
 plot_clusters(df, "K-Means Clustering with Centroids", centers=X_center)

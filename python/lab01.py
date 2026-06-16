@@ -1,16 +1,13 @@
-# Cell 1
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
 from sklearn.datasets import fetch_california_housing
 
-# Cell 2
 housing_df = fetch_california_housing(as_frame=True).frame
 numerical_features = housing_df.select_dtypes(include=[np.number]).columns
 
 
-# Cell 3
 def plot(plot_type, title_prefix, **kwargs):
     plt.figure(figsize=(15, 10))
 
@@ -23,11 +20,9 @@ def plot(plot_type, title_prefix, **kwargs):
     plt.show()
 
 
-# Cell 4
 print(housing_df.describe())
 plot(sns.histplot, "Distribution of", kde=True, bins=30)
 
-# Cell 5
 for feature in numerical_features:
     series = housing_df[feature]
 

@@ -1,8 +1,6 @@
-# Cell 1
 import pandas as pd
 
 
-# Cell 2
 def find_s(file):
     df = pd.read_csv(file)
     h = ["?"] * (len(df.columns) - 1)
@@ -15,5 +13,4 @@ def find_s(file):
     print(f"{df}\n\nFinal Hypothesis: {h}")
 
 
-# Cell 3
 find_s("../weather_data.csv")
